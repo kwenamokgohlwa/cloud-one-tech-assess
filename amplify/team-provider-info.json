@@ -1,0 +1,14 @@
+{
+    "javascript": {
+        "awscloudformation": {
+            "AuthRoleName": "cloudonetechassess-javascript-20190701200207-authRole",
+            "UnauthRoleArn": "arn:aws:iam::294058721760:role/cloudonetechassess-javascript-20190701200207-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::294058721760:role/cloudonetechassess-javascript-20190701200207-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "cloudonetechassess-javascript-20190701200207-deployment",
+            "UnauthRoleName": "cloudonetechassess-javascript-20190701200207-unauthRole",
+            "StackName": "cloudonetechassess-javascript-20190701200207",
+            "StackId": "arn:aws:cloudformation:eu-west-1:294058721760:stack/cloudonetechassess-javascript-20190701200207/58106620-9c2a-11e9-ac1a-0a9c21152684"
+        }
+    }
+}

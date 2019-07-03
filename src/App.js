@@ -20,15 +20,21 @@ class App extends Component {
     };
   }
 
-  componentDidMount() {
-    this.readPrinters();
+  async componentDidMount() {
+    try {
+      const apiData = await API.graphql(graphqlOperation(listPrinters));
+      const printers = apiData.data.listPrinters.items;
+      this.setState({ printers, selectedId: printers[0].id });
+    } catch (e) {
+      console.log('Error: ', e)
+    }
   }
 
   readPrinters = async () => {
     try {
       const apiData = await API.graphql(graphqlOperation(listPrinters));
       const printers = apiData.data.listPrinters.items;
-      this.setState({ printers, selectedId: printers[0].id });
+      this.setState({ printers });
     } catch (e) {
       console.log('Error: ', e)
     }

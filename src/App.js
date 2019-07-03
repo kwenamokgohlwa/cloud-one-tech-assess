@@ -50,7 +50,7 @@ class App extends Component {
       const printer = { name, ip, status };
       const printers = [...this.state.printers, printer];
       await API.graphql(graphqlOperation(createPrinter, {input: printer}));
-      this.setState({ printers, createName: '', createIp: '', createStatus: true});
+      this.setState({ printers, createName: '', createIp: '' });
       console.log('printer successfully created!');
     } catch (e) {
       console.log('Error: ', e)
@@ -68,7 +68,7 @@ class App extends Component {
       const printer = { id, name, ip, status };
       await API.graphql(graphqlOperation(updatePrinter, {input: printer}));
      this.readPrinters();
-     this.setState({ updateName: '', updateIp: '', updateStatus: true});
+     this.setState({ updateName: '', updateIp: '' });
       console.log('printer successfully updated!')
     } catch (e) {
       console.log('Error: ', e)
